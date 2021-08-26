@@ -1,0 +1,16 @@
+Given the following tweet:
+let tweet = 'Starting to get the hang of it... #javascript #launchschool';
+
+What will the following statements evaluate to?
+
+tweet.split(' '); 
+tweet.split(' ').reverse();
+tweet.split(' ').reverse().join(' ');
+
+Reference the documentation to learn about the return value of each method.
+
+Solution
+
+["Starting", "to", "get", "the", "hang", "of", "it...", "#javascript", "#launchschool"]
+["#launchschool", "#javascript", "it...", "of", "hang", "the", "get", "to", "Starting"]
+'#launchschool #javascript it... of hang the get to Starting'
