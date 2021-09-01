@@ -27,7 +27,6 @@ function greet (langCode) {
        break;
    }
  }
-
  /*
 Discussion
 

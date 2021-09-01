@@ -36,5 +36,4 @@ as an object literal, but as a block statement. So if you want to force it
 to treat the statement as an object literal, you need to make sure that the statement 
 doesn't start with a brace. The easiest way to do this, without changing the meaning or 
 behavior of the statement, is by adding parentheses.
-
 */

@@ -8,14 +8,16 @@ function Caps (string) {
   let newArray = [];
 
   for (const element of array) {
-    newArray = element[0].toUpperCase();
-    return newArray
+     newArray.push(element[0].toUpperCase() + array.slice(0));
   }
 
   console.log(newArray);
 }
 
 Caps(string);
+
+//let array = string.split(' ')
+//console.log(array[0][0])
 
 // Solution 
 /* 

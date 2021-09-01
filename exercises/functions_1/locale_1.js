@@ -7,7 +7,7 @@ function extractLanguage (locale) {
   return `'${locale.charAt(0)}${locale.charAt(1)}'`
 }
 
-// Solution 
+// Solution
 
 function extractLanguage2(locale) {
   return locale.split('_')[0];
