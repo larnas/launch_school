@@ -1,0 +1,23 @@
+{
+  "en" : {
+    "firstNumber" : "What is the first number?",
+    "secondNumber" : "What is the second number",
+    "invalidNum" : "Hmmm...that doesn't look like a valid number.",
+    "operation" : "What operation would you like to perform?\n1) Add 2) Subtract 3) Multiply 4) Divide",
+    "invalidOperation" : "Must choose 1, 2, 3 or 4.",
+    "welcome" : "Welcome to the Calculator!",
+    "repeatCal" : "You want to perform another calculation?\n1) Yes",
+    "goodbye" : "Goodbye!"
+  },
+
+  "el" : {
+    "firstNumber" : "Ποιος είναι ο πρώτος αριθμός;",
+    "secondNumber" : "Ποιος είναι ο δεύτερος αριθμός;",
+    "invalidNum" : "Χμμμ ... δεν μοιάζει με έγκυρο αριθμό.",
+    "operation" : "Ποια επέμβαση θα θέλατε να εκτελέσετε;\n1) Προσθήκη 2) Αφαίρεση 3) Πολλαπλασιασμός 4) Διαίρεση",
+    "invalidOperation" : "Πρέπει να επιλέξετε 1, 2, 3 ή 4.",
+    "welcome" : "Καλώς ήλθατε στον Υπολογιστή!",
+    "repeatCal" : "Θέλετε να κάνετε έναν άλλο υπολογισμό;\n1) Ναί",
+    "goodbye" : "Αντίο!"
+  }
+}

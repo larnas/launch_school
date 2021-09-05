@@ -1,6 +1,14 @@
 const readline = require('readline-sync');
+const MESSAGES = require('./calculator_messages.json')
+const LANGUAGE = 'en';
 
-function prompt(msg) {
+
+function message(message, lang = 'en') {
+  return MESSAGES[lang][message];
+}
+
+function prompt(key) {
+  let msg = message(key, LANGUAGE)
   console.log(`=> ${msg}`);
 }
 
@@ -10,27 +18,27 @@ function invalidNumber(num) {
 
 function calculation () {
 
-  prompt("What is the first number");
+  prompt("firstNumber");
   let number1 = readline.question();
 
   while (invalidNumber(number1)) {
-    prompt("Hmmm...that doesn't look like a valid number.");
+    prompt(messages("nvalidNum"));
     number1 = readline.question();
   }
 
-  prompt("What is the second number");
+  prompt("secondNumber");
   let number2 = readline.question();
 
   while (invalidNumber(number2)) {
-    prompt("Hmmm...that doesn't look like a valid number.");
+    prompt("invalidNum");
     number2 = readline.question();
   }
 
-  prompt("What oparetion would you like to performe?\n1) Add 2) Subtract 3) Multiply 4) Divide");
+  prompt("operation");
   let operation = readline.question();
 
   while (!['1','2','3','4'].includes(operation)) {
-    prompt("Must choose 1, 2, 3 or 4.");
+    prompt("invalidOperation");
     operation = readline.question();
   }
 
@@ -51,16 +59,16 @@ function calculation () {
       break;
   }
 
-  prompt(`The result is ${output}`);
+  console.log(`The result is ${output}`);
 }
 
 // 
-prompt("welcome to The Calculator!");
+prompt("welcome");
 
 do {
   calculation ();
-  prompt("You want to perform another calculation?\n1) Yes");
+  prompt("repeatCal");
   repeat = readline.question();
 } while (repeat === '1');
 
-prompt("goodbye!");
+prompt("goodbye");
