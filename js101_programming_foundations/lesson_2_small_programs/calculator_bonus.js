@@ -1,5 +1,5 @@
 const readline = require('readline-sync');
-const MESSAGES = require('./calculator_messages.json')
+const MESSAGES = require('./calculator_messages.json');
 const LANGUAGE = 'en';
 
 
@@ -8,7 +8,7 @@ function message(message, lang = 'en') {
 }
 
 function prompt(key) {
-  let msg = message(key, LANGUAGE)
+  let msg = message(key, LANGUAGE);
   console.log(`=> ${msg}`);
 }
 
@@ -16,13 +16,13 @@ function invalidNumber(num) {
   return num.trimStart() === '' || Number.isNaN(Number(num));
 }
 
-function calculation () {
+function getData () {
 
   prompt("firstNumber");
   let number1 = readline.question();
 
   while (invalidNumber(number1)) {
-    prompt(messages("nvalidNum"));
+    prompt("nvalidNum");
     number1 = readline.question();
   }
 
@@ -42,33 +42,40 @@ function calculation () {
     operation = readline.question();
   }
 
+  return [number1, number2, operation];
+}
+
+function calculation () {
+  const [firstNum, secondNum, operator] = getData();
   let output;
 
-  switch (operation) {
+  switch (operator) {
     case '1':
-      output = Number(number1) + Number(number2);
+      output = Number(firstNum) + Number(secondNum);
       break;
     case '2':
-      output = Number(number1) - Number(number2);
+      output = Number(firstNum) - Number(secondNum);
       break;
     case '3':
-      output = Number(number1) * Number(number2);
+      output = Number(firstNum) * Number(secondNum);
       break;
     case '4':
-      output = Number(number1) / Number(number2);
+      output = Number(firstNum) / Number(secondNum);
       break;
   }
 
   console.log(`The result is ${output}`);
 }
 
-// 
+//
 prompt("welcome");
 
 do {
-  calculation ();
+  calculation();
   prompt("repeatCal");
-  repeat = readline.question();
-} while (repeat === '1');
+} while (readline.question() === '1');
 
 prompt("goodbye");
+
+// Function 'getData' has too many lines (21). Maximum allowed is 20
+// Function 'getData' has too many statements (16). Maximum allowed is 15
