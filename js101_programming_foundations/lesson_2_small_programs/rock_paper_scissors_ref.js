@@ -1,5 +1,5 @@
 const readline = require('readline-sync');
-VALID_CHIOCES = ['rock', 'paper', 'scissors']
+const VALID_CHIOCES = ['rock', 'paper', 'scissors']
 
 function prompt (msg) {
   console.log(`=> ${msg}`);
