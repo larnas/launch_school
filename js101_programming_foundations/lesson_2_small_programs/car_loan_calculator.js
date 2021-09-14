@@ -9,7 +9,6 @@ function invalidNumber(value) {
 }
 //value.trim() === '' ||
 
-
 function getLoanAmount (loanAmount) {
   prompt("What is your loan amount?");
   loanAmount = Number(readline.question());
@@ -43,7 +42,6 @@ function getDurationYears (loanDurationYears) {
   }
   return loanDurationYears;
 }
-
 
 do {
   prompt('Welcome to Loan Calculator!');
