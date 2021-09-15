@@ -23,8 +23,6 @@ function getComputerChoice () {
 
 function getPlayerChoice (choice) {
   choice = readline.question();
-  if (choice === Object.keys(VALID_CHOICES)) return choice;
-  else {
     switch (choice) {
       case 'r': return 'rock';
       case 'p': return 'paper';
@@ -32,7 +30,6 @@ function getPlayerChoice (choice) {
       case 'l': return 'lizard';
       case 'sp': return 'spock';
     }
-  }
   return choice;
 }
 
