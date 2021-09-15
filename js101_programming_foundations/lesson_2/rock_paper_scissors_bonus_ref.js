@@ -82,7 +82,7 @@ while (true) {
 
   prompt(`The Score is Player: ${score.player} - ${score.computer} :Computer`);
 
-  console.log( "\n" );
+  console.log( "\n" ); // just a space line
 
   if (score.player ===  MAX_SCORE || score.computer === MAX_SCORE ) {
 
