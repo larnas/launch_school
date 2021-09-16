@@ -15,6 +15,10 @@ function prompt (msg) {
   console.log(`=> ${msg}`);
 }
 
+function displayEmptyLine () {
+  console.log( "\n" );
+}
+
 function getComputerChoice () {
   let randomIndex = Math.floor(Math.random() *
                     Object.keys(VALID_CHOICES).length);
@@ -23,13 +27,13 @@ function getComputerChoice () {
 
 function getPlayerChoice (choice) {
   choice = readline.question();
-    switch (choice) {
-      case 'r': return 'rock';
-      case 'p': return 'paper';
-      case 'sc': return 'scissors';
-      case 'l': return 'lizard';
-      case 'sp': return 'spock';
+
+  for (let key in VALID_CHOICES) {
+    if (VALID_CHOICES[key].shorthand === choice) {
+      return key;
     }
+  }
+
   return choice;
 }
 
@@ -53,6 +57,10 @@ function addScore (winner) {
   } else if (winner === 'Computer') {
     score.computer += 1;
   }
+}
+
+function resetScore () {
+  score = { player: 0, computer: 0 }
 }
 
 while (true) {
@@ -82,7 +90,7 @@ while (true) {
 
   prompt(`The Score is Player: ${score.player} - ${score.computer} :Computer`);
 
-  console.log( "\n" ); // just a space line
+  displayEmptyLine()
 
   if (score.player ===  MAX_SCORE || score.computer === MAX_SCORE ) {
 
@@ -94,7 +102,7 @@ while (true) {
       answer = readline.question().toLowerCase();
     }
 
-    if (answer === 'y') score = { player: 0, computer: 0 }; // reset score
+    if (answer === 'y') ; resetScore()
     if (answer !== 'y') break;
   }
 }
