@@ -60,7 +60,7 @@ function addScore (winner) {
 }
 
 function resetScore () {
-  score = { player: 0, computer: 0 }
+  score = { player: 0, computer: 0 };
 }
 
 while (true) {
@@ -90,7 +90,7 @@ while (true) {
 
   prompt(`The Score is Player: ${score.player} - ${score.computer} :Computer`);
 
-  displayEmptyLine()
+  displayEmptyLine();
 
   if (score.player ===  MAX_SCORE || score.computer === MAX_SCORE ) {
 
@@ -102,7 +102,7 @@ while (true) {
       answer = readline.question().toLowerCase();
     }
 
-    if (answer === 'y') ; resetScore()
+    if (answer === 'y') resetScore();
     if (answer !== 'y') break;
   }
 }
